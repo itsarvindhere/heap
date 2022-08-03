@@ -1,6 +1,7 @@
 
 
 import java.util.PriorityQueue;
+import java.util.Scanner;
 
 /*
  *  Since we want to find 'kth' 'largest' element, we have to use MinHeap here.
@@ -21,7 +22,38 @@ public class kth_largest_element {
         return minHeap.peek();
     }
     public static void main(String[] args) {
-        int[] arr  = {7, 10, 4, 3, 20, 15};
-        System.out.print("kth largest element is: " + kthLargest(arr, 3));
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the number of elements in the array");
+
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter the elements of the array");
+
+        for(int i = 0; i < n; i++){
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Enter the value of k");
+
+        int k = sc.nextInt();
+
+        System.out.println("*****************************");
+        System.out.print("Array is:  ");
+        for(int i = 0; i < n; i++){
+            System.out.print(arr[i] + " ");
+        }
+
+        System.out.println("");
+        System.out.print("k is:  ");
+        System.out.println(k);
+
+        System.out.println("*****************************");
+
+        System.out.print("kth largest element is: " + kthLargest(arr, k));
+
+        sc.close();
     }
 }
