@@ -34,7 +34,7 @@ import java.util.Scanner;
 */
 
 
-public class top_k_frequent_numbers {
+public class Top_k_frequent_numbers {
 
     static int[] topKFrequentNumbers(int[] arr, int k) {
         HashMap<Integer, Integer> freq = new HashMap<>();

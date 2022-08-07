@@ -117,7 +117,7 @@ import java.util.Scanner;
 
 
 
- public class sort_k_sorted_array {
+ public class Sort_k_sorted_array {
 
     public static int[] kSortedArray(int[] arr, int k) {
       PriorityQueue<Integer> minHeap = new PriorityQueue<>();

@@ -8,7 +8,7 @@ import java.util.Scanner;
  * SO, returned arr = [20, 15, 10] <- 3 largest elements in array
  */
 
-public class return_k_largest_numbers {
+public class Return_k_largest_numbers {
 
     public static int[] kLargestElements(int[] arr, int k) {
         PriorityQueue<Integer> minHeap  = new PriorityQueue<Integer>();

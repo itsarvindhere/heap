@@ -41,7 +41,7 @@ import java.util.Scanner;
  
  */
 
-public class k_closest_elements {
+public class K_closest_elements {
 
         public static int compare(int a, int b, int x) {
             int abs1 = Math.abs(b - x);

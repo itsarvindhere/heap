@@ -8,7 +8,7 @@ import java.util.Scanner;
  *  In Java, we can have a minHeap using a PriorityQueue.
  */
 
-public class kth_largest_element {
+public class Kth_largest_element {
     public static int kthLargest(int[] arr, int k) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 

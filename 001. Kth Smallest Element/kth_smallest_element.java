@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Since we have to find 'kth' 'smallest', we use MaxHeap to find. In java, we can create a MaxHeap using a PriorityQueue and Comparator.reverseOrder()
  */
 
-public class kth_smallest_element {
+public class Kth_smallest_element {
 
     public static int kthSmallest(int[] arr, int k) {
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
