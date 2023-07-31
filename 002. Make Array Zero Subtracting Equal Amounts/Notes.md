@@ -83,7 +83,7 @@ And if this sum of minimums rule works in the final operation, it should also wo
 	
 And so, the important thing to understand is this "SUM OF MINIMUMS" and how can we use this sum of minimums now to our advantage.
 
-We will use a heap so that at any time, after we are done removing elements <= sum of minimum so far, we can immediately get the next minimum element for the next operation (by first reducing it be the "sum of minimums")
+We will use a heap so that at any time, after we are done removing elements <= sum of minimum so far, we can immediately get the next minimum element for the next operation (by first reducing it by the "sum of minimums")
 
 # **3. OPTIMAL APPROACH**
 
@@ -111,7 +111,7 @@ An index in this list will represent an element in the "nums" list.
 	It the value was 0, we would've skipped this element and moved on to next index.
 	
 	Now that at index 1, the value is > 0, this is now the current minimum element.
-	But, do note that if w did some operations before, we would need to reduce 
+	But, do note that if we did some operations before, we would need to reduce 
 	this minimum element by sumOfMinimums so far, just how we did in the heap approach.
 	
 	And now, we will get the value which would be the smallest value at this particular operation in the list.
