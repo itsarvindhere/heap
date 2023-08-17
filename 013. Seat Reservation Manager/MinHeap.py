@@ -6,8 +6,7 @@ class SeatManager:
     def __init__(self, n: int):
         
         # A min heap that gives us the smallest available unreserved seat
-        self.minHeap = []
-        for i in range(1, n + 1): heappush(self.minHeap, i)
+        self.minHeap = [i for i in range(1,n + 1)]
 
     def reserve(self) -> int:
         
