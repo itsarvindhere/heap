@@ -30,12 +30,8 @@ def reorganizeString(s: str) -> str:
                 # Put the character in the output list
                 output.append(top[1])
                 
-                # Reduce its frequency
-                top[0] *= -1
-                top[0] -= 1
-                
-                # If the frequency is not 0, we can push it back to heap with the updated frequency
-                if top[0] > 0: heappush(maxHeap, [-top[0], top[1]])
+                # If the frequency is not 0 after we reduce by 1, we can push it back to heap with the updated frequency
+                if top[0] + 1 != 0: heappush(maxHeap, [top[0] + 1, top[1]])
             
             # If character on top of heap is same as previous character
             else:
@@ -49,10 +45,7 @@ def reorganizeString(s: str) -> str:
                 # And do the same thing as we did in the above step
                 output.append(newTop[1])
                 
-                newTop[0] *= -1
-                newTop[0] -= 1
-                
-                if newTop[0] > 0: heappush(maxHeap, [-newTop[0], newTop[1]])
+                if newTop[0] + 1 != 0: heappush(maxHeap, [newTop[0] + 1, newTop[1]])
                     
                     
                 # Finally, also push back the character that was initially on top which we did not consider
