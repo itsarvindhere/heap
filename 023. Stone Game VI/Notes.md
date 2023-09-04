@@ -59,7 +59,7 @@ And well, that's the most optimal strategy.
 	But also consider the loss of the opposition
 	
 	We want to maximize these two values together
-	We want to increase our profit and also decrease the loss of opposition
+	We want to increase our profit and also increase the loss of opposition
 	And this sum of (profit + loss) should be maximum
 	
 	Coming back to the example -> [1,5] and [7,1]
