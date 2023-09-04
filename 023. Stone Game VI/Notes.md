@@ -50,7 +50,7 @@ Now, think about some other strategy by which Alice may win or at least the game
 
 There is a reason why this problem says "**Both players know the other's values.**"
 
-I mean, if I am playing this game then my thinking would be to remove a stone such that not only I get some points, but it also removes the stone that gives my opposition the maximum value so that he/she cannot choose it in the next move.
+I mean, if I am playing this game then my thinking would be to remove a stone such that not only I get some points, but it also removes the stone that my opposition might remove in next round.
 
 And well, that's the most optimal strategy.
 
