@@ -23,7 +23,7 @@ Basically, the most optimal way to execute the tasks will be to execute the most
 
 But, once we execute that task, we cannot execute that task again until we are at the "currentTime + cooldownTime" time. So, till the task is not usable, we will put that task into a queue. 
 
-And only when we see that the task is not usable, we will take it out from the queue and put it back in the maxHeap which will order it automatically.
+And only when we see that the task is now usable, we will take it out from the queue and put it back in the maxHeap which will order it automatically.
 
 Since there are only uppercase alphabets in the input list, the time complexity of the heap for push and pop will be O(Log26) or a constant time.
 
