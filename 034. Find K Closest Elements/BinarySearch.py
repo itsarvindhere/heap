@@ -57,7 +57,7 @@ def findClosestElements(arr, k: int, x: int):
             startDiff = abs(arr[start] - x)
             endDiff = abs(arr[end] - x)
             
-            # Since "end" index is smallr than "start" index at this point
+            # Since "end" index is smaller than "start" index at this point
             # If the difference of "end" with "x" is <= difference of "start" with "x"
             # The closestElementIdx will be "end"
             closestElementIdx = end if endDiff <= startDiff else start
