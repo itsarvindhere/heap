@@ -53,7 +53,7 @@ Then, we have [1,7]. We see that it starts at "1" but the previous interval ends
 
 Then, we have [5,6]. We see that it starts at "5" but the previous interval ends at "7" So there is an overlap. But, now comes the question of whether we should create a new group or put it in some existing group.
 
-We can see that [5,6] can go in the group which has [2,4] because the start value "5" is greater than the "right" value "4". In simple words, [5,6] starts after [2,4] ends. So these two do not overlap.
+We can see that [5,6] can go in the group which has [2,4] because the "left" value "5" is greater than the "right" value "4". In simple words, [5,6] starts after [2,4] ends. So these two do not overlap.
 
 Now, just think of a scenario where there are 1000s of intervals between [2,4] and [5,6] with which [5,6] overlaps. So how can we quickly find the interval with which [5,6] does not overlap?
 
@@ -81,11 +81,11 @@ And we see that [5,6] and [2,4] can be in the same group.
 
 Now, if we do not update this smallest "right" value, then even [5,8] also is non overlapping with [2,4]. So, by our logic, the group will contain [2,4], [5,6] and [5,8] which is not right. Because [5,6] and [5,8] overlap, even though [2,4] and [5,8] don't. The reason is [5,8] starts before [5,6] has ended.
 
-It means, as soon as we had grouped [5,6] and [2,4] together, we should've no longer considered [2,4] and updated our next smallest "right" value to "6".
+It means, as soon as we had grouped [5,6] and [2,4] together, we should've no longer considered [2,4] and updated our smallest "right" value to "6" (Since it is the next smallest after "4" among all the intervals we have traversed so far).
 
-So, as soon as we group two interval together, we no longer care about the interval with a smaller "end" value anymore. Since we don't care about it, we should now quickly get the next smaller "end" value so far.
+So, as soon as we group two interval together, we no longer care about the interval with the smallest "end" value anymore. Since we don't care about it, we should now quickly get the next smaller "end" value so far.
 
-So, to keep track of the smallest "right" value so far that we can compare with the current "left" value, we can use a minHeap.
+So, to keep track of the smallest "right" value so far that we can compare with the current "left" value, we can use a minHeap. And even if we remolve the smallest value from top, we can get the next smallest again from the top.
 
 And that's the whole idea of the minHeap solution.
 
