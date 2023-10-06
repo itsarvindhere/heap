@@ -45,11 +45,11 @@ But, now the question is, for the right interval, should we create a new group o
 
 Let's take another example for that - 
 
-    [[2,4], [1,7], [5,6]]
+    [[2,4], [3,7], [5,6]]
 
 Here, initially, the interval [2,4] will go in a new group.
 
-Then, we have [1,7]. We see that it starts at "1" but the previous interval ends at "4". It means, there is an overlap. So, we will have to create a new group again.
+Then, we have [3,7]. We see that it starts at "3" but the previous interval ends at "4". It means, there is an overlap. So, we will have to create a new group again.
 
 Then, we have [5,6]. We see that it starts at "5" but the previous interval ends at "7" So there is an overlap. But, now comes the question of whether we should create a new group or put it in some existing group.
 
@@ -63,7 +63,7 @@ But, if there is an overlap, we can be sure that all other intervals also overla
 
 In the example above 
 
-    [[2,4], [1,7], [5,6]]
+    [[2,4], [3,7], [5,6]]
 
 When we are at [5,6] the smallest "right" value so far is "4" And we see that "left" value of [5,6] is "5". 
 
@@ -73,7 +73,7 @@ And now, we no longer need to keep track of "4". Why?
 
 Again, that's because we have already sorted the list. So, any interval that is coming after [5,6] will have "left" value >= 5 only. So, that interval will definitely start after the interval [2,4] has ended. But, keeping "4" as smallest at that time as well can increase our problems because just think of this case - 
 
-    [[2,4], [1,7], [5,6], [5,8]] 
+    [[2,4], [3,7], [5,6], [5,8]] 
 
 Till [5,6] we have the smallest "right" value as "4"
 
