@@ -46,7 +46,7 @@ To understand it better, let's take an example.
 	
 	And we want this cost to be as low as possible.
 	
-	First "4" workers and their costs are [17,12,10,2] and [2,11,20,8]
+	First "4" and "Last 4" workers and their costs are [17,12,10,2] and [2,11,20,8]
 	
 	And we can see that the lowest is "2" and "2" appears in both lists.
 	
@@ -54,9 +54,9 @@ To understand it better, let's take an example.
 	
 	So now, left part is [17,12,10] and right part is [2,11,20,8]
 	
-	We will always try that both lists have equal candidates. 
+	We will always try that both lists have  "4" workers. 
 	
-	And we can do that by adding one worker in a list after we removed on from it.
+	And we can do that by adding one worker in a list after we removed one from it.
 	
 	But we can only add if we have workers available that are not part of any of the two lists.
 	
