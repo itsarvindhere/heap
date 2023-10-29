@@ -51,4 +51,4 @@ Finally, we need to keep track of the "time" at which a "server" can pick a task
 
 If there are no free servers, then a task can be picked by the server that finishes executing the earliest among "busyServers". So, in that case, we can update our "time".
 
-In some edge cases, the "time" can be smaller than the current index "i" which should happen because "time" should always remain >= i. So, we always want the greater value among "time" and "i".
+In some edge cases, the "time" can be smaller than the current index "i" which should not happen because "time" should always remain >= i. So, we always want the greater value among "time" and "i".
