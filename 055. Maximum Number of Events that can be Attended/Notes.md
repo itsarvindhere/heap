@@ -60,7 +60,7 @@ For example,
 
 So, what did we understand from this test case?
 
-We understood that at any day, the most optimal event to attend is the one that is ending first out of all the other events that we can choose from that day.
+We understood that at any day, the most optimal event to attend is the one that is ending first out of all the events that can be attended that day.
 
 That's why, at day "2", we could attend [1,5], [1,5], [2,3] and [2,3]. And among all these, [2,3] and [2,3] are both ending at day "3". So, we can choose any one of them and attend that event. And it makes sense, right? Because we know that [1,5] is ending two days after [2,3] ends so it is possible that we might be able to attend [1,5] in the future. But right now, it makes more sense to attend [2,3].
 
