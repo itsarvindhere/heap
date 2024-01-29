@@ -82,6 +82,8 @@ One thing that is not hard to figure out is that, All the points in the final ou
 	
 Now, from this, you can understand that we need to keep track of the maximum height so far and we also need a way to move to the next maximum height in case current maximum height is no longer valid. So, we need an ordered data structure that can give us the maximum height at any time. And well, we can use a MAX HEAP for this.
 
+When a building starts, its height needs to be added to the maxHeap. But when it ends, it needs to be removed from the maxHeap.
+
 But, one thing to note is that while removal from a MAX HEAP is O(1) if done from the top, it is not very efficienct if we try to remove some value from some other place than the top. That's why, when we have to remove some height (when building ends), we can save that height value in some dictionary with its count (count, becuase there can be multiple buildings with same height).  And then, we can remove those heights only when they appear on top of the heap. 
 
 Another thing that can now be understood from above example is that we need to go over every "x" axis point, not just the "left" values. This was one mistake I was doing when I initially started writing a solution and failed. And we need to go over those values from left to right, in sorted order.
