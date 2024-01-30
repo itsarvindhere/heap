@@ -96,9 +96,9 @@ So, from above example, we can conclude some things -
 	then the value to be added will be (left,height)
 	
 	When it is the "right" of a building and the current maximum height has changed
-	then the value to be added will be (left, new maximum height)
+	then the value to be added will be (right, new maximum height)
 	
 	When all buildings have ended and the heap is empty, it means we are at ground level.
-	So, the value to be added will be 
+	So, the value to be added will be (x-axis val, 0)
 	
 And finally, do not forget the "NOTE" in the problem - **There must be no consecutive horizontal lines of equal height in the output skyline.**
