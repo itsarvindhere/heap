@@ -58,7 +58,7 @@ To understand how we will maximize this count, let's take a simple example with 
 	
 	But if we take the course [5,12] then we can also finish the course [4,13]
 	
-And so, the idea is that, if you have taken 1 or more courses so far, and have spend "x" number of days already, then for the current course, there are two scenarios - 
+And so, the idea is that, if you have taken 1 or more courses so far, and have spent "x" number of days already, then for the current course, there are two scenarios - 
 
 	1. You can take it because "x" + current course's duration is <= current course's deadline. Then, its fine.
 	2. You cannot take it because "x" + current course's duration is > current course's deadline. Then that's an issue

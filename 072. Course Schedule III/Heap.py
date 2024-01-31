@@ -50,18 +50,9 @@ def scheduleCourse(courses) -> int:
                 # The course on top of the maxHeap has the longest duration
                 topDuration = -maxHeap[0]
                 
-                # If we undo the course on top of the maxHeap, how many days will get reduced
-                # That would be "currentDay - topDuration"
-                # So, if instead of the course on top of the maxHeap, we had taken the current course instead
-                # Then what would've been the value of the currentDay
-                # That would've been (currentDay - topDuration) + duration
-                newDayAfterDoingCurrentCourse = (currentDay - topDuration) + duration
-                
-                # So, if this value is smaller than "currentyDay"
-                # Then it means it makes more sense to take the current course instead of course on top of the maxHeap
-                # Because since the "currentDay" value has been reduced
-                # It means, we now have extra days with us than before, and so, chances of completing more courses have increased
-                if newDayAfterDoingCurrentCourse < currentDay:
+                # If the current course takes less days to complete than course on top of the maxHeap
+                # Then we can skip the course on top of the maxHeap and instead do the current course
+                if topDuration > duration:
                     heappop(maxHeap)
                     currentDay -= topDuration
                     currentDay += duration
