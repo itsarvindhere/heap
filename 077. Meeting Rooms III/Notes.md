@@ -34,7 +34,7 @@ The approach is pretty straightforward. At any time, if we have any free rooms, 
 
 Similarly, if some rooms are currently in use, then we want to order them based on the time at which they will become free again from smallest to largest. And again, we will use a Min Heap for this.
 
-We will traverse the meetings from left to right, based on their start values. Hence, we wil sort them by their start values initially.
+We will traverse the meetings from left to right, based on their start values. Hence, we will sort them by their start values initially.
 
 Finally, to keep track of how many meetings each room held, we can use a list of size "n" where each index represents a room.
 
