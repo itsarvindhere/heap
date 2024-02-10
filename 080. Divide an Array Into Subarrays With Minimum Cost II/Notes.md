@@ -102,10 +102,10 @@ Let's take an example to understand it.
 	[1], [3], [2,6,4,2]
 	
 	Here, starting index of second subarray is 1
-	And starting index of last subarrayt is 2
+	And starting index of last subarray is 2
 	And difference is 2 - 1 => 1
 	'
-	Since 1 <= dist, it means this is a valid divison/
+	Since 1 <= dist, it means this is a valid division.
 	
 	
 	Similarly, [1,3], [2], [6,4,2] is also a valid division.
@@ -225,7 +225,7 @@ Let's understand with the help of an example.
 	Since "2" occurs at index 2,3 and 4
 	the best two candidates at the moment are the ones at index "2" and "3"
 	
-	The one at index "4" might be a valid candiate later. So instead of discarding it,
+	The one at index "4" might be a valid candidate later. So instead of discarding it,
 	we will push it in a minHeap which will order items from smallest to largest.
 	
 	In this way, at any time, if our maxHeap size is not "k-2", 
