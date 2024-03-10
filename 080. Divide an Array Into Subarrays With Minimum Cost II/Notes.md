@@ -24,7 +24,7 @@ There are some things you need to understand before we go over the different sol
 
 We need to divide the array into "k" subarrays and a valid division is the one where the difference between the starting index of second subarray and starting index of "kth" subarray is <= dist.
 
-In other words, for a valid division, the distance between starting index of second subarray and starting index of last subarray <= k.
+In other words, for a valid division, the distance between starting index of second subarray and starting index of last subarray <= dist.
 
 For any subarray, its cost is simply its first element. This also means that for the first subarray, the cost will always be the element at index 0. Because the first subarray will always have first element as the index "0" element. So, that's one thing which is the same for all test cases.
 
